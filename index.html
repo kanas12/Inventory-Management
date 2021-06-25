@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invenory Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-apple"></i></span>
+                        <span class="title">
+                            <h2>Brand Name</h2>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                        <span class="title">Customers</span>
+                    </a>
+              
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        <span class="title">Sign out</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle"></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="search here">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+
+
+                </div>
+                <div class="user">
+                    <img src="image/about.png.JPG">
+
+                </div>
+
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">2,045</div>
+                        <div class="cardName">Total Number of Items</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa fa-eye color" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">85</div>
+                        <div class="cardName">  items in stock</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa fa-shopping-cart color" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">239</div>
+                        <div class="cardName"> Total number of categories</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa fa-comment color" aria-hidden="true"></i>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="hold">
+                <div class="details">
+                    <div class="Orders">
+                        <div style="padding: 10px;">
+                            <button id="addItem">Add Item</button>
+                            
+                            <button id="removeItem">Remove Item</button>
+                        </div>
+                        <form class="add-form  hide">
+                            <h2>Add Item</h2>
+                           <div>
+                            <label>Item</label>
+                            <input class="itemInfo" type="text" >
+                           </div>
+                           <div>
+                            <label>Price</label>
+                            <input class="itemInfo" type="text" >
+                           </div>
+                           <div>
+                            <label>Quantity</label>
+                            <input class="itemInfo" type="number" >
+                           </div>
+                           <div>
+                           <button id="submitItem">Add</button>
+                           </div>
+                        </form>
+                        <div class="cardHeader">
+                            <h1>Orders</h1>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Price</td>
+                                    <td>Quantity</td>
+                                    <td>Total</td>
+                                </tr>
+                            </thead>
+                            <tbody id="itemsTable">
+                                
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="customers">
+                       
+                            <h2>Customers</h2>
+                       
+                       <div class="customer-list">
+                           <ul>
+                               <li>Emmanuel</li>
+                               <li>Eben</li>
+                               <li>Mark</li>
+                               <li>Kofi</li>
+                               <li>Ato</li>
+                               <li>Akua </li>
+                           </ul>
+                       </div>
+                    </div>  
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>

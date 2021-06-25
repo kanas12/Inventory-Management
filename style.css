@@ -1,0 +1,323 @@
+@import url('https://font.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popins' sans-serif;
+    
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #053742;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 60px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}.navigation ul li:hover{
+    background: #03a9f4;
+
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgba(245, 237, 241, 0.993);
+}
+.navigation ul li a .icon{
+    position: relative; 
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icon .fa{
+    color: beige;
+    font-size: 24px;
+}
+
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: #f5f5f5;
+    transition: 0.5s;
+}
+.main .active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar{
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.toggle::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+
+}
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0,2);
+}
+.search label .fa{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+
+}
+.user{
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.cardBox .card{
+    position: relative;
+    background: #39A2DB;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+    color:#fff;
+} 
+.cardBox .card .cardName{
+    color: #fff;
+}
+.cardBox .card .iconBox{
+    font-size: 2.5em;
+    color: #003147;
+}
+.details{
+    /* position: relative; */
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap:2rem;
+}
+.details .Orders{
+    /* position: relative;     */
+    min-height: 530px;
+    background: #E8F0F2;
+    padding: 20px;
+   
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h1{
+    font-weight: 600;
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background: #003147;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td{
+    font-weight: 600;
+}
+.details .Orders table tr{
+    border-bottom: 1px solid rgba(0,0,0,0,1);
+}
+.details .Orders table  tbody tr:last-child{
+    border-bottom: none;
+}
+.details .Orders table  tbody tr:hover{
+    background: #03a9f4;
+    color: #fff;
+}
+.details .Orders table  tbody tr td{
+    padding: 9px 5px;
+}
+
+.status{
+    position: relative;
+    padding: 2px 4px;
+    background: #999;
+    border-radius: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.delivered{
+    background: #8de02c;
+}
+.pending{
+    background: #f9ca3f;
+}
+.return{
+    background: #f00;
+}
+.inprogress{
+    background: #006696;
+}
+
+.add-form{
+    display:block;
+    padding:20px;
+    border-radius:8px;
+    border:1px solid black;
+    width:60%;
+    text-align: center;
+    background-color: #053742;
+    color:#fff;
+}
+
+.add-form label{
+   font-size:18px;
+   font-weight: 500;
+   margin-right:10px;
+   color:#fff;
+   border-radius: 10px;
+
+}
+
+.add-form div{
+    display: block;
+    margin-bottom:10px;
+}
+
+
+.add-form div input{
+    width:50%;
+}
+
+.hide{
+    display: none;
+}
+
+/* #item1 img{
+    width: 50px;
+    height: 80px;
+    border: 1px solid red;
+} */
+
+.customers{
+    padding:20px;
+    background-color: #008baa;
+    text-align: center;
+    
+}
+
+.customer-list ul{
+    list-style: none;
+    padding:0;
+    margin:0
+}
+
+.customer-list ul li{
+     padding:10px;
+     margin-bottom: 5px;
+     font-weight:18px;
+     color:#fff;
+}
+
+
+
+
